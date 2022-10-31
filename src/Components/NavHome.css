@@ -1,0 +1,35 @@
+.nav-div-home{
+    width: 100%;
+    padding: 5px 5% 5px 10px;
+    background-color: orangered;
+    display: flex;
+    justify-content: space-between;
+}
+.nav-div-home ul{
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 0;
+}
+.nav-div-home ul li{
+    font-family: monospace;
+    font-size: 15px;
+    font-weight: 500;
+}
+.nav-div-home ul li a:hover{
+    color: white;
+}
+.search-btn{
+    border: none;
+    outline: none;
+    background-color: yellow;
+    padding: 2px 20px;
+    
+    border-radius: 5px;
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+.active{
+    color: white;
+}
