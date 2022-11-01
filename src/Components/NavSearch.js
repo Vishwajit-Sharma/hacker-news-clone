@@ -4,7 +4,7 @@ import { NavLink } from 'react-router-dom'
 import { BsSearch } from "react-icons/bs";
 import { FaAlgolia } from "react-icons/fa";
 
-export default function NavSearch() {
+export default function NavSearch(props) {
     return (
         <div className='nav-div-search'>
             <div className="d-flex">
@@ -15,7 +15,7 @@ export default function NavSearch() {
             </div>
             <div className='search-div'>
                 <span className='search-icon'><BsSearch/></span>
-                <input type="text" placeholder='Search stories by title, url or author'/>
+                <input type="text" value={props.search} placeholder='Search stories by title, url or author' onChange={(e)=>props.setSearch(e.target.value)}/>
                 <span className='search-credits'>Search by<span className='ps-2 text-primary fw-bold'><FaAlgolia/> algolia</span></span>
             </div>
 
