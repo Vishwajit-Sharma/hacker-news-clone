@@ -38,7 +38,7 @@ export default function SearchDefault(props) {
   useEffect(()=>{
     const fetchNews = async () =>{
       
-      const url = props.secondFilter === "popularity" ? `http://hn.algolia.com/api/v1/search?&query=${props.search}&tags=${props.firstFilter}&page=${page}&hitsPerPage=50&numericFilters=${timeFilter}` : `http://hn.algolia.com/api/v1/search_by_date?query=${props.search}&tags=${props.firstFilter}&page=${page}&hitsPerPage=50&numericFilters=${timeFilter}`
+      const url = props.secondFilter === "popularity" ? `https://hn.algolia.com/api/v1/search?&query=${props.search}&tags=${props.firstFilter}&page=${page}&hitsPerPage=50&numericFilters=${timeFilter}` : `https://hn.algolia.com/api/v1/search_by_date?query=${props.search}&tags=${props.firstFilter}&page=${page}&hitsPerPage=50&numericFilters=${timeFilter}`
       const res = await fetch(url) 
       const data =  await res.json()
       setNews(data.hits)

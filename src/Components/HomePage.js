@@ -12,7 +12,7 @@ export default function HomePage() {
 
   useEffect(()=>{
     const fetchNews = async () =>{
-      const res = await fetch(`http://hn.algolia.com/api/v1/search_by_date?query&page=${page}&hitsPerPage=50`)
+      const res = await fetch(`https://hn.algolia.com/api/v1/search_by_date?query&page=${page}&hitsPerPage=50`)
       const data =  await res.json()
       console.log(data.hits);
       setNews(data.hits)
