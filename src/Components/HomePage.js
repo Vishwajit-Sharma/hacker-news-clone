@@ -8,6 +8,7 @@ export default function HomePage() {
 
   const [news, setNews] = useState([])
   const [page, setPage] = useState(1)
+  const [totalPage, setTotalPage] =  useState(0)
 
   useEffect(()=>{
     const fetchNews = async () =>{
@@ -15,6 +16,8 @@ export default function HomePage() {
       const data =  await res.json()
       console.log(data.hits);
       setNews(data.hits)
+      setTotalPage(data.nbPages)
+      console.log(data.nbPages);
     }
     fetchNews()
   },[page])
@@ -48,7 +51,7 @@ export default function HomePage() {
               )
           }
           <div className='d-flex justify-content-center mt-3'>
-            {<Pagination count={15} page={page} color="error" onChange={handleChange} />}
+            {<Pagination count={totalPage} page={page} color="error" onChange={handleChange} />}
           </div>
         </div>
     </div>

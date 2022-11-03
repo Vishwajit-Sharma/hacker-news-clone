@@ -10,8 +10,7 @@ function App() {
         <Route path='/' element={<HomePage/>}></Route>
         <Route path='/search' element={<SearchPage/>}></Route>
         <Route path='*' element={<h1>Page Not Found</h1>}></Route>
-      </Routes>
-      
+      </Routes>  
     </div>
   );
 }
